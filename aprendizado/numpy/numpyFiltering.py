@@ -1,8 +1,8 @@
 import numpy as np
 
-'''
+"""
 Filtragem de dados é o processo de selecionar um subconjunto de dados com base em condições específicas.
-'''
+"""
 
 array = np.array([[1, 2, 3], 
                   [4, 5, 6],

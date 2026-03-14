@@ -1,45 +1,65 @@
 import numpy as np
 
-'''
+"""
 Funções agregadas são funções que operam em um array e retornam um único valor, 
 como a soma, média, mínimo, máximo, etc. Elas são usadas para resumir ou agregar
 os dados de um array de forma eficiente.
-'''
+"""
 
 array = np.array([[1, 2, 3], 
                   [4, 5, 6],
                   [7, 8, 9]])
 
-# Soma de todos os elementos do array
-soma_total = np.sum(array)
-print("Soma total:", soma_total)
+def operacoes_agregadas(arr: np.ndarray):
 
-# Média de todos os elementos do array
-media_total = np.mean(array)
-print("Média total:", media_total)
 
-# Valor mínimo do array
-minimo = np.min(array)
-print("Valor mínimo:", minimo)
+    """
+    Realiza operações agregadas em um array numpy.
 
-posicao_minimo = np.argmin(array)
-print("Posição do valor mínimo (índice):", posicao_minimo)
+    Parâmetros
+    ----------
+    arr : np.ndarray
+        O array sobre o qual as operações agregadas serão realizadas.
 
-# Valor máximo do array
-maximo = np.max(array)
-print("Valor máximo:", maximo)
+    Retorna
+    -------
+    Soma total : float
+        A soma de todos os elementos do array.
 
-# Soma dos elementos ao longo do eixo 0 (colunas)
-soma_colunas = np.sum(array, axis=0)
-print("Soma das colunas:", soma_colunas)
+    Média total : float
+        A média de todos os elementos do array.
 
-# Soma dos elementos ao longo do eixo 1 (linhas)
-soma_linhas = np.sum(array, axis=1)
-print("Soma das linhas:", soma_linhas)
+    Valor mínimo : float
+        O valor mínimo do array.
 
-# Desvio padrão dos elementos do array
-desvio_padrao = np.std(array)
-print("Desvio padrão:", desvio_padrao)
+    Posição do valor mínimo (índice) : int
+        A posição do valor mínimo no array, retornada como um índice.
 
-variancia = np.var(array)
-print("Variância:", variancia)
+    Valor máximo : float
+        O valor máximo do array.
+
+    Soma das colunas : np.ndarray
+        A soma dos elementos ao longo do eixo 0 (colunas).
+
+    Soma das linhas : np.ndarray
+        A soma dos elementos ao longo do eixo 1 (linhas).
+
+    Desvio padrão : float
+        O desvio padrão dos elementos do array.
+
+    Variância : float
+        A variância dos elementos do array.
+    """
+
+    print("Soma total:", np.sum(arr))
+    print("Média total:", np.mean(arr))
+    print("Valor mínimo:", np.min(arr))
+    print("Posição do valor mínimo (índice):", np.argmin(arr))
+    print("Valor máximo:", np.max(arr))
+    print("Soma das colunas:", np.sum(arr, axis=0))
+    print("Soma das linhas:", np.sum(arr, axis=1))
+    print("Desvio padrão:", np.std(arr))
+    print("Variância:", np.var(arr))
+
+operacoes_agregadas(array)
+

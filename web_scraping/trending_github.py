@@ -2,6 +2,23 @@ import json
 import os
 from playwright.sync_api import sync_playwright
 
+"""
+
+Web scraper para extrair repositórios em destaque do GitHub.
+O scraper acessa a página de tendências do GitHub, extrai informações
+sobre os repositórios em destaque, como nome, linguagem de programação,
+número de estrelas e forks, e salva esses dados em um arquivo JSON.
+
+Para rodar este código, certifique-se de ter o Playwright instalado e configurado corretamente.
+Certifique-se também de ter o navegador Chrome instalado, que é necessário para o Playwright funcionar.
+
+Comando para instalar o Playwright:
+    
+    pip install playwright
+
+
+"""
+
 BASE_URL = "https://github.com/trending?since=monthly"
 
 def run(playwright):
